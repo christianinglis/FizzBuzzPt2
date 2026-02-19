@@ -25,6 +25,10 @@ else if (inputnum % 5 === 0) {
     output = "Buzz"
     return output;
 }
+else if (isNaN(inputnam)) {
+    output = "Enter a number";
+    return output;
+}
 else {
     output = inputnum;
     return output;
