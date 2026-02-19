@@ -1,12 +1,11 @@
 // TODO: Define constants for the form and the result display area
-const userinput = document.getElementById("numberInput");
+const userinput = document.getElementById("InputNumber");
 const submit = document.getElementById("submitbutton");
 const result = document.getElementById("result");
 
 
 // TODO: Add the first line of the event listener to handle form submission
-submit.addEventListener("click", submitfunction);
-function submitfunction(event) {
+submit.addEventListener("click", function(event){
     event.preventDefault();
 
 
@@ -22,13 +21,13 @@ function submitfunction(event) {
     else if (inputnum % 5 === 0) {
         result.textContent = "Buzz";
     }
-    else if (isNaN(inputnam)) {
+    else if (isNaN(inputnum)) {
         result.textContent = "Enter a number";
     }
     else {
-        output = inputnum;
-        return output;
-    }   
+        result.textContent = inputnum;
+    }
+}); 
 
 // If divisible by both 3 and 5, set the output to "FizzBuzz"
 // If divisible by 3, set the output to "Fizz"
@@ -36,4 +35,3 @@ function submitfunction(event) {
 // Otherwise, set the output to the number itself
 
 // Display the result on the page
-result.textContent = output;
